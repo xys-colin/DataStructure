@@ -8,6 +8,7 @@ public class FibonacciSearch {
     public static void main(String[] args) {
         int[] array = {1, 8, 10, 89, 100, 124};
         maxSize = array.length;
+        System.out.println(fibSearch(array,89));
     }
 
     public static int[] fibonacci() {
@@ -29,7 +30,7 @@ public class FibonacciSearch {
         while (high > f[k] - 1) {
             k++;
         }
-        //因为f[k]可能大于a的长度,因此我们需要构造一个新的数组,并指向a[]
+        //因为f[k]可能大于array的长度,因此我们需要构造一个新的数组,并指向temp[]
         int[] temp = Arrays.copyOf(array, f[k]);
         //实际上需求使用a数组最后的数填充temp
         for (int i = high + 1; i < temp.length; i++) {
